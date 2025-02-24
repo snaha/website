@@ -20,4 +20,9 @@
 		align-items: flex-start;
 		gap: calc(2 * var(--double-padding));
 	}
+	@media (max-width: 919px) {
+		main {
+			max-width: 560px;
+		}
+	}
 </style>

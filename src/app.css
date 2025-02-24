@@ -7,6 +7,12 @@ body {
 	align-items: center;
 }
 
+@media (max-width: 919px) {
+	body {
+		padding: var(--padding);
+	}
+}
+
 @font-face {
 	src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf');
 	font-family: 'Space Grotesk';
