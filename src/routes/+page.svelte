@@ -6,6 +6,34 @@
 
 	let width = $state(0)
 	const isMobile = $derived(width < 920)
+	const notImplemented = '#notImplemented'
+
+	const companies = [
+		{ name: 'Prezi', icon: '/icons/prezi.svg', link: notImplemented },
+		{ name: 'Felfele', icon: '/icons/felfele.svg', link: notImplemented },
+		{ name: 'Swarm', icon: '/icons/swarm.svg', link: notImplemented },
+		{ name: 'Logos', icon: '/icons/logos.svg', link: notImplemented },
+		{ name: 'Kalkul', icon: '/icons/kalkul.svg', link: 'https://kalkul.app/' },
+		{ name: 'Diete', icon: '/icons/diete.svg', link: 'https://diete.design/' }
+	]
+
+	const coreTeam = [
+		{
+			name: 'Attila',
+			img: '/team/attila.png',
+			info: 'Shabby chic enamel pin raclette authentic letterpress, selfies cold-pressed. Ascot adaptogen sus, intelligentsia fingerstache offal food truck narwhal hashtag occupy big mood etsy seitan austin.'
+		},
+		{
+			name: 'David',
+			img: '/team/david.png',
+			info: "Put a bird on it man bun freegan semiotics edison bulb unicorn celiac cloud bread grailed you probably haven't heard of them street art shoreditch iPhone. Kinfolk locavore banh mi gluten-free irony trust fund."
+		},
+		{
+			name: 'Vojtech',
+			img: '/team/vojtech.png',
+			info: 'Tumblr freegan poke, poutine pug bespoke tacos pour-over cliche normcore selvage. XOXO cray hammock post-ironic, aesthetic typewriter umami. Shaman farm-to-table biodiesel kombucha kinfolk.'
+		}
+	]
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -45,22 +73,22 @@
 <section class="reverse">
 	<div class="about-team">
 		<Typography variant={isMobile ? 'default' : 'large'} class="block">
-			Attila and David met back in 2012, while working together at <a href="/">Prezi</a>. In 2019,
-			they co-founded the <a href="/">Felfele Foundation</a>. Shortly after that, they met with
-			Vojtech while working with the <a href="/">Swarm Foundation</a>. Since them Attila, David and
-			Vojtech have stuck together. They’ve worked with different teams at <a href="/">Logos</a> and
+			Attila and David met back in 2012, while working together at <a href={notImplemented}>Prezi</a
+			>. In 2019, they co-founded the <a href={notImplemented}>Felfele Foundation</a>. Shortly after
+			that, they met with Vojtech while working with the
+			<a href={notImplemented}>Swarm Foundation</a>. Since them Attila, David and Vojtech have stuck
+			together. They’ve worked with different teams at <a href={notImplemented}>Logos</a> and
 			co-founded Snaha together. Besides helping selected clients, Snaha is bootstrapping
-			<a href="/">Kalkul</a>
+			<a href="https://kalkul.app/" target="_blank">Kalkul</a>
 			and developing
-			<a href="/">Diète</a>, its own open-source design system.
+			<a href="https://diete.design/" target="_blank">Diète</a>, its own open-source design system.
 		</Typography>
 		<div class="icons">
-			<img src="/icons/prezi.svg" alt="Prezi" />
-			<img src="/icons/felfele.svg" alt="Felfele" />
-			<img src="/icons/swarm.svg" alt="Swarm" />
-			<img src="/icons/logos.svg" alt="Logos" />
-			<img src="/icons/kalkul.svg" alt="Kalkul" />
-			<img src="/icons/diete.svg" alt="Diete" />
+			{#each companies as company}
+				<a href={company.link} target="_blank">
+					<img src={company.icon} alt={company.name} />
+				</a>
+			{/each}
 		</div>
 	</div>
 	<div class="container">
@@ -68,33 +96,13 @@
 	</div>
 </section>
 <section>
-	<div class="card">
-		<img src="/team/attila.png" alt="Attila" />
-		<Heading text="Attila" />
-		<Typography>
-			Shabby chic enamel pin raclette authentic letterpress, selfies cold-pressed. Ascot adaptogen
-			sus, intelligentsia fingerstache offal food truck narwhal hashtag occupy big mood etsy seitan
-			austin.
-		</Typography>
-	</div>
-	<div class="card">
-		<img src="/team/david.png" alt="David" />
-		<Heading text="David" />
-		<Typography>
-			Put a bird on it man bun freegan semiotics edison bulb unicorn celiac cloud bread grailed you
-			probably haven't heard of them street art shoreditch iPhone. Kinfolk locavore banh mi
-			gluten-free irony trust fund.
-		</Typography>
-	</div>
-	<div class="card">
-		<img src="/team/vojtech.png" alt="Vojtech" />
-		<Heading text="Vojtech" />
-		<Typography>
-			Tumblr freegan poke, poutine pug bespoke tacos pour-over cliche normcore selvage. XOXO cray
-			hammock post-ironic, aesthetic typewriter umami. Shaman farm-to-table biodiesel kombucha
-			kinfolk.
-		</Typography>
-	</div>
+	{#each coreTeam as member}
+		<div class="card">
+			<img src={member.img} alt={member.name} />
+			<Heading text={member.name} />
+			<Typography>{member.info}</Typography>
+		</div>
+	{/each}
 </section>
 <Divider --double-padding="0" />
 <section>
@@ -232,8 +240,11 @@
 		display: flex;
 		align-items: center;
 		gap: var(--double-padding);
+		a {
+			display: flex;
+		}
 	}
-	.icons > img {
+	.icons img {
 		width: 32px;
 		height: 32px;
 	}
@@ -304,7 +315,7 @@
 		.icons {
 			gap: var(--padding);
 		}
-		.icons > img {
+		.icons img {
 			width: 24px;
 			height: 24px;
 		}
