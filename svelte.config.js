@@ -8,6 +8,7 @@ export default {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		appDir: 'app'
 	}
 };
