@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/diete/button.svelte'
 	import Divider from '$lib/components/diete/divider.svelte'
 	import Typography from '$lib/components/diete/typography.svelte'
 	import Heading from '$lib/components/heading.svelte'
 	import { base } from '$app/paths'
+	import { onMount } from 'svelte'
 
 	let width = $state(0)
 	const isMobile = $derived(width < 920)
@@ -35,10 +36,28 @@
 			info: 'Tumblr freegan poke, poutine pug bespoke tacos pour-over cliche normcore selvage. XOXO cray hammock post-ironic, aesthetic typewriter umami. Shaman farm-to-table biodiesel kombucha kinfolk.'
 		}
 	]
+	let header: HTMLElement | undefined = $state()
+	let navShown = $state(false)
+
+	function updateNavVisibility() {
+		if (!header) return
+		navShown = header.getBoundingClientRect().bottom <= 0
+	}
+
+	onMount(() => {
+		window.addEventListener('scroll', updateNavVisibility)
+		return () => window.removeEventListener('scroll', updateNavVisibility)
+	})
 </script>
 
 <svelte:window bind:innerWidth={width} />
-<section class="header">
+<nav class:navShown>
+	<img src={`${base}/brand.svg`} alt="Brand" />
+	<Button --colors-ultra-high="var(--colors-high-accent)" dimension={isMobile ? 'small' : 'compact'}
+		>CONTACT US</Button
+	>
+</nav>
+<section class="header" bind:this={header}>
 	<div class="left">
 		<img src={`${base}/logo.svg`} alt="Logo" class="logo" />
 		{#if isMobile}
@@ -234,6 +253,26 @@
 		min-width: 364px;
 		width: 100%;
 	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: var(--padding);
+		background-color: var(--colors-ultra-low);
+		position: fixed;
+		z-index: 1;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transform: translateY(-100%);
+		img {
+			width: 39px;
+		}
+	}
+	.navShown {
+		transition: transform 0.2s ease-in;
+		transform: translateY(0);
+	}
 	.about-team {
 		display: flex;
 		flex-direction: column;
@@ -312,6 +351,9 @@
 		}
 		.reverse {
 			flex-direction: column-reverse;
+		}
+		nav img {
+			width: 31px;
 		}
 		.container {
 			align-items: flex-start;
