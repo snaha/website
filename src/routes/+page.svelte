@@ -4,7 +4,6 @@
 	import Typography from '$lib/components/diete/typography.svelte'
 	import Heading from '$lib/components/heading.svelte'
 	import { base } from '$app/paths'
-	import { onMount } from 'svelte'
 
 	let width = $state(0)
 	const isMobile = $derived(width < 920)
@@ -36,28 +35,19 @@
 			info: 'Tumblr freegan poke, poutine pug bespoke tacos pour-over cliche normcore selvage. XOXO cray hammock post-ironic, aesthetic typewriter umami. Shaman farm-to-table biodiesel kombucha kinfolk.'
 		}
 	]
-	let header: HTMLElement | undefined = $state()
-	let navShown = $state(false)
-
-	function updateNavVisibility() {
-		if (!header) return
-		navShown = header.getBoundingClientRect().bottom <= 0
-	}
-
-	onMount(() => {
-		window.addEventListener('scroll', updateNavVisibility)
-		return () => window.removeEventListener('scroll', updateNavVisibility)
-	})
+	let height = $state(0)
+	let scrollY = $state(0)
+	let navShown = $derived(height + (isMobile ? 16 : 64) <= scrollY)
 </script>
 
-<svelte:window bind:innerWidth={width} />
+<svelte:window bind:innerWidth={width} bind:scrollY />
 <nav class:navShown>
 	<img src={`${base}/brand.svg`} alt="Brand" />
 	<Button --colors-ultra-high="var(--colors-high-accent)" dimension={isMobile ? 'small' : 'compact'}
 		>CONTACT US</Button
 	>
 </nav>
-<section class="header" bind:this={header}>
+<section class="header" bind:clientHeight={height}>
 	<div class="left">
 		<img src={`${base}/logo.svg`} alt="Logo" class="logo" />
 		{#if isMobile}
