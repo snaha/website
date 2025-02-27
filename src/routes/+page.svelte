@@ -50,7 +50,8 @@
 		>
 		<Button
 			--colors-ultra-high="var(--colors-high-accent)"
-			dimension={isMobile ? 'compact' : 'large'}>CONTACT US</Button
+			dimension={isMobile ? 'compact' : 'large'}
+			href={`${base}/contact`}>CONTACT US</Button
 		>
 	</div>
 	{#if !isMobile}
@@ -186,7 +187,7 @@
 <Divider --double-padding="0" />
 <footer>
 	<span>hello@snaha.net</span>
-	<a href="/contact">Contact us</a>
+	<a href={`${base}/contact`}>Contact us</a>
 	<a href="https://github.com/snaha" target="_blank">Github</a>
 	<a href="/">Discord</a>
 	{#if !isMobile}
