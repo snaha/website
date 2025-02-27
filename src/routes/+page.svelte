@@ -221,6 +221,9 @@
 		align-items: flex-start;
 		gap: calc(2 * var(--double-padding));
 	}
+	.header img {
+		width: 400px;
+	}
 	.container {
 		display: flex;
 		flex-direction: column;
