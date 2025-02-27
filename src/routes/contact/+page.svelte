@@ -23,7 +23,7 @@
 <Divider --double-padding="0" />
 <footer>
 	<span>hello@snaha.net</span>
-	<a href="/contact">Contact us</a>
+	<a href={`${base}/contact`}>Contact us</a>
 	<a href="https://github.com/snaha" target="_blank">Github</a>
 	<a href="/">Discord</a>
 	{#if !isMobile}
