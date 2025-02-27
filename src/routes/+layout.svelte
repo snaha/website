@@ -13,6 +13,7 @@
 
 <style>
 	main {
+		width: 100%;
 		max-width: 1184px;
 		display: flex;
 		flex-direction: column;
