@@ -43,8 +43,10 @@
 <svelte:window bind:innerWidth={width} bind:scrollY />
 <nav class:navShown>
 	<img src={`${base}/brand.svg`} alt="Brand" />
-	<Button --colors-ultra-high="var(--colors-high-accent)" dimension={isMobile ? 'small' : 'compact'}
-		>CONTACT US</Button
+	<Button
+		--colors-ultra-high="var(--colors-high-accent)"
+		dimension={isMobile ? 'small' : 'compact'}
+		href={`${base}/contact`}>CONTACT US</Button
 	>
 </nav>
 <section class="header" bind:clientHeight={height}>
