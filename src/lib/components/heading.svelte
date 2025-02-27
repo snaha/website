@@ -33,8 +33,8 @@
 <style>
 	.root {
 		display: flex;
-		justify-content: center;
 		align-items: center;
+		width: fit-content;
 	}
 	.wrapper {
 		display: flex;
