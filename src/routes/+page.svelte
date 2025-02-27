@@ -40,7 +40,7 @@
 <svelte:window bind:innerWidth={width} />
 <section class="header">
 	<div class="left">
-		<img src={`${base}/logo.png`} alt="Logo" class="logo" />
+		<img src={`${base}/logo.svg`} alt="Logo" class="logo" />
 		{#if isMobile}
 			<img src={`${base}/header-img.png`} alt="Header" />
 		{/if}
