@@ -9,7 +9,9 @@
 
 <svelte:window bind:innerWidth={width} />
 <section>
-	<img src={`${base}/logo.svg`} alt="Logo" class="logo" />
+	<a href={`${base}/`}>
+		<img src={`${base}/logo.svg`} alt="Logo" class="logo" />
+	</a>
 	<div class="container">
 		<Typography variant={isMobile ? 'default' : 'large'} class="high"
 			>Have a project in mind where we could help? Care to learn more about Snaha?
@@ -36,9 +38,11 @@
 	section {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
 		gap: calc(2 * var(--double-padding));
-		align-self: stretch;
+	}
+	section > a {
+		display: flex;
+		width: fit-content;
 	}
 	.container {
 		max-width: 560px;
