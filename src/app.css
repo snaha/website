@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+	background: var(--colors-ultra-low);
+	padding: calc(2 * var(--double-padding));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (max-width: 919px) {
+	body {
+		padding: var(--padding);
+	}
+}
+
+@font-face {
+	src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+	font-family: 'Space Grotesk';
+	font-feature-settings: 'ss04' on;
+}
+@font-face {
+	src: url('/fonts/Snahav04-Bold.otf');
+	font-family: 'Snaha';
+	font-weight: bold;
+}
