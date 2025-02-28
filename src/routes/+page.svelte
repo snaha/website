@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/diete/button.svelte'
 	import Divider from '$lib/components/diete/divider.svelte'
 	import Typography from '$lib/components/diete/typography.svelte'
@@ -35,10 +35,21 @@
 			info: 'Vojtech is full-stack software engineer with a knack for turning ideas into reality—especially when blockchain is involved. An eternal optimist, he’s the kind of developer who says, “We can build that tomorrow”—and does his best to make it happen. A lifelong dreamer, he’s driven by a desire to contribute to humanity, whether through volunteering, philanthropy, working with organizations pushing scientific progress or finding ways to make a difference in his own city.'
 		}
 	]
+	let height = $state(0)
+	let scrollY = $state(0)
+	let navShown = $derived(height + (isMobile ? 16 : 64) <= scrollY)
 </script>
 
-<svelte:window bind:innerWidth={width} />
-<section class="header">
+<svelte:window bind:innerWidth={width} bind:scrollY />
+<nav class:navShown>
+	<img src={`${base}/brand.svg`} alt="Brand" />
+	<Button
+		--colors-ultra-high="var(--colors-high-accent)"
+		dimension={isMobile ? 'small' : 'compact'}
+		href={`${base}/contact`}>CONTACT US</Button
+	>
+</nav>
+<section class="header" bind:clientHeight={height}>
 	<div class="left">
 		<img src={`${base}/logo.svg`} alt="Logo" class="logo" />
 		{#if isMobile}
@@ -240,6 +251,26 @@
 		min-width: 364px;
 		width: 100%;
 	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: var(--padding);
+		background-color: var(--colors-ultra-low);
+		position: fixed;
+		z-index: 1;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transform: translateY(-100%);
+		img {
+			width: 39px;
+		}
+	}
+	.navShown {
+		transition: transform 0.2s ease-in;
+		transform: translateY(0);
+	}
 	.about-team {
 		display: flex;
 		flex-direction: column;
@@ -318,6 +349,9 @@
 		}
 		.reverse {
 			flex-direction: column-reverse;
+		}
+		nav img {
+			width: 31px;
 		}
 		.container {
 			align-items: flex-start;
