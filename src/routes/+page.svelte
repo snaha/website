@@ -124,25 +124,27 @@
 	<div class="card">
 		<Heading text="Design" />
 		<Typography>
-			Shabby chic enamel pin raclette authentic letterpress, selfies cold-pressed. Ascot adaptogen
-			sus, intelligentsia fingerstache offal food truck narwhal hashtag occupy big mood etsy seitan
-			austin.
+			We can help from defining the product scope and features all the way to the finest execution
+			details. We typically use Diète, our own open-source design system, which can be customised
+			into a unique visual direction. This allows us to move faster while ensuring quality and the
+			highest accessibility standards.
 		</Typography>
 	</div>
 	<div class="card">
 		<Heading text="Frontend" />
 		<Typography>
-			Put a bird on it man bun freegan semiotics edison bulb unicorn celiac cloud bread grailed you
-			probably haven't heard of them street art shoreditch iPhone. Kinfolk locavore banh mi
-			gluten-free irony trust fund.
+			We build fast, maintainable, and accessible user interfaces using Svelte. Its modern, reactive
+			approach allows us to write less code while achieving high performance. We focus on delivering
+			smooth interactions, quick load times, and a seamless experience across all devices.
 		</Typography>
 	</div>
 	<div class="card">
 		<Heading text="Backend" />
 		<Typography>
-			Tumblr freegan poke, poutine pug bespoke tacos pour-over cliche normcore selvage. XOXO cray
-			hammock post-ironic, aesthetic typewriter umami. Shaman farm-to-table biodiesel kombucha
-			kinfolk.
+			We develop backend systems that serve as a strong foundation for applications. This includes
+			APIs for handling business logic, database management for storing and retrieving data
+			efficiently, and authentication to ensure security. We prioritize scalability and
+			maintainability while keeping things as simple as possible.
 		</Typography>
 	</div>
 </section>
@@ -150,25 +152,29 @@
 	<div class="card">
 		<Heading text="Branding" />
 		<Typography>
-			Tumblr freegan poke, poutine pug bespoke tacos pour-over cliche normcore selvage. XOXO cray
-			hammock post-ironic, aesthetic typewriter umami. Shaman farm-to-table biodiesel kombucha
-			kinfolk.
+			Meaningful branding will help make your product stand out. We believe that there should be a
+			strong connection between the product and the brand. Based on product design, we can help with
+			defining a minimal brand concept and strategy, designing your product logo and actionable
+			branding guidelines to build websites, marketing material and more.
 		</Typography>
 	</div>
 	<div class="card">
 		<Heading text="Marketing" />
 		<Typography>
-			Shabby chic enamel pin raclette authentic letterpress, selfies cold-pressed. Ascot adaptogen
-			sus, intelligentsia fingerstache offal food truck narwhal hashtag occupy big mood etsy seitan
-			austin.
+			Great design, code and branding are rarely enough to make a product successful. We can help
+			crafting tailored marketing strategies and creative campaigns to reach the strategic audience
+			for your product. We can help with writing content in line with your brand’s tone of voice and
+			create all the required visual material to support marketing campaigns.
 		</Typography>
 	</div>
 	<div class="card">
-		<Heading text="Devops" />
+		<Heading text="DevOps" />
 		<Typography>
-			Put a bird on it man bun freegan semiotics edison bulb unicorn celiac cloud bread grailed you
-			probably haven't heard of them street art shoreditch iPhone. Kinfolk locavore banh mi
-			gluten-free irony trust fund.
+			Successful products stand and fall with availability. A great user experience means nothing if
+			your product is unreliable. We ensure that deployments are automated, infrastructure is
+			scalable, and monitoring is in place to catch issues before they become problems. As they say,
+			"Good infrastructure is invisible"—our goal is to make sure everything runs smoothly without
+			anyone noticing.
 		</Typography>
 	</div>
 </section>
