@@ -45,8 +45,8 @@
 			<img src={`${base}/header-img.png`} alt="Header" />
 		{/if}
 		<Typography variant={isMobile ? 'default' : 'h3'} class="normal block"
-			><span class="yellow">We turn worthy ideas into products.</span><br />
-			We’re an OG team geared towards making the web a bit better for hoomans.</Typography
+			><span class="yellow">We turn worthy ideas into products.</span>
+			Snaha is a product makers collective geared towards making the web a bit better for hoomans.</Typography
 		>
 		<Button
 			--colors-ultra-high="var(--colors-high-accent)"
@@ -65,7 +65,7 @@
 	</div>
 	<div class="container">
 		<Typography variant={isMobile ? 'default' : 'large'}
-			>We’re a small and independent team defending privacy, freedom and more generally, human
+			>We’re a small and independent OG team defending privacy, freedom and more generally, human
 			interests in software products.<br /><br />We build for the web — websites, web applications,
 			web3 dapps & other crypto-related projects.
 		</Typography>
@@ -78,9 +78,9 @@
 			Attila and David met back in 2012, while working together at <a href={notImplemented}>Prezi</a
 			>. In 2019, they co-founded the <a href={notImplemented}>Felfele Foundation</a>. Shortly after
 			that, they met with Vojtech while working with the
-			<a href={notImplemented}>Swarm Foundation</a>. Since them Attila, David and Vojtech have stuck
+			<a href={notImplemented}>Swarm Foundation</a>. Since then Attila, David and Vojtech have stuck
 			together. They’ve worked with different teams at <a href={notImplemented}>Logos</a> and
-			co-founded Snaha together. Besides helping selected clients, Snaha is bootstrapping
+			co-founded Snaha collective together. Besides helping selected clients, Snaha is bootstrapping
 			<a href="https://kalkul.app/" target="_blank">Kalkul</a>
 			and developing
 			<a href="https://diete.design/" target="_blank">Diète</a>, its own open-source design system.
