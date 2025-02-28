@@ -124,9 +124,10 @@
 	<div class="card">
 		<Heading text="Design" />
 		<Typography>
-			Shabby chic enamel pin raclette authentic letterpress, selfies cold-pressed. Ascot adaptogen
-			sus, intelligentsia fingerstache offal food truck narwhal hashtag occupy big mood etsy seitan
-			austin.
+			We can help from defining the product scope and features all the way to the finest execution
+			details. We typically use Diète, our own open-source design system, which can be customised
+			into a unique visual direction. This allows us to move faster while ensuring quality and the
+			highest accessibility standards
 		</Typography>
 	</div>
 	<div class="card">
@@ -150,17 +151,19 @@
 	<div class="card">
 		<Heading text="Branding" />
 		<Typography>
-			Tumblr freegan poke, poutine pug bespoke tacos pour-over cliche normcore selvage. XOXO cray
-			hammock post-ironic, aesthetic typewriter umami. Shaman farm-to-table biodiesel kombucha
-			kinfolk.
+			Meaningful branding will help make your product stand out. We believe that there should be a
+			strong connection between the product and the brand. Based on product design, we can help with
+			defining a minimal brand concept and strategy, designing your product logo and actionable
+			branding guidelines to build websites, marketing material and more.
 		</Typography>
 	</div>
 	<div class="card">
 		<Heading text="Marketing" />
 		<Typography>
-			Shabby chic enamel pin raclette authentic letterpress, selfies cold-pressed. Ascot adaptogen
-			sus, intelligentsia fingerstache offal food truck narwhal hashtag occupy big mood etsy seitan
-			austin.
+			Great design, code and branding are rarely enough to make a product successful. We can help
+			crafting tailored marketing strategies and creative campaign to reach the strategical audience
+			for your product. We can help with writing content inline your brand’s tone of voice and
+			create all the required visual material to support marketing campaigns.
 		</Typography>
 	</div>
 	<div class="card">
