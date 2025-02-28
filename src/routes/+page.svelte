@@ -9,14 +9,14 @@
 	const isMobile = $derived(width < 920)
 	const notImplemented = '/'
 
-	const companies = [
-		{ name: 'Prezi', icon: `${base}/icons/prezi.svg`, link: notImplemented },
-		{ name: 'Felfele', icon: `${base}/icons/felfele.svg`, link: notImplemented },
-		{ name: 'Swarm', icon: `${base}/icons/swarm.svg`, link: notImplemented },
-		{ name: 'Logos', icon: `${base}/icons/logos.svg`, link: notImplemented },
-		{ name: 'Kalkul', icon: `${base}/icons/kalkul.svg`, link: 'https://kalkul.app/' },
-		{ name: 'Diete', icon: `${base}/icons/diete.svg`, link: 'https://diete.design/' }
-	]
+	const companies = {
+		Prezi: { icon: `${base}/icons/prezi.svg`, link: 'https://prezi.com' },
+		Felfele: { icon: `${base}/icons/felfele.svg`, link: 'https://felfele.org' },
+		Swarm: { icon: `${base}/icons/swarm.svg`, link: 'https://www.ethswarm.org' },
+		Logos: { icon: `${base}/icons/logos.svg`, link: 'https://logos.co' },
+		Kalkul: { icon: `${base}/icons/kalkul.svg`, link: 'https://kalkul.app/' },
+		Diete: { icon: `${base}/icons/diete.svg`, link: 'https://diete.design/' }
+	}
 
 	const coreTeam = [
 		{
@@ -86,20 +86,24 @@
 <section class="reverse">
 	<div class="about-team">
 		<Typography variant={isMobile ? 'default' : 'large'} class="block">
-			Attila and David met back in 2012, while working together at <a href={notImplemented}>Prezi</a
-			>. In 2019, they co-founded the <a href={notImplemented}>Felfele Foundation</a>. Shortly after
-			that, they met with Vojtech while working with the
-			<a href={notImplemented}>Swarm Foundation</a>. Since then Attila, David and Vojtech have stuck
-			together. They’ve worked with different teams at <a href={notImplemented}>Logos</a> and
-			co-founded Snaha collective together. Besides helping selected clients, Snaha is bootstrapping
-			<a href="https://kalkul.app/" target="_blank">Kalkul</a>
+			Attila and David met back in 2012, while working together at <a
+				href={companies.Prezi.link}
+				target="_blank">Prezi</a
+			>. In 2019, they co-founded the
+			<a href={companies.Felfele.link} target="_blank">Felfele Foundation</a>. Shortly after that,
+			they met with Vojtech while working with the
+			<a href={companies.Swarm.link} target="_blank">Swarm Foundation</a>. Since then Attila, David
+			and Vojtech have stuck together. They’ve worked with different teams at
+			<a href={companies.Logos.link} target="_blank">Logos</a>
+			and co-founded Snaha collective together. Besides helping selected clients, Snaha is bootstrapping
+			<a href={companies.Kalkul.link} target="_blank">Kalkul</a>
 			and developing
-			<a href="https://diete.design/" target="_blank">Diète</a>, its own open-source design system.
+			<a href={companies.Diete.link} target="_blank">Diète</a>, its own open-source design system.
 		</Typography>
 		<div class="icons">
-			{#each companies as company}
-				<a href={company.link} target="_blank">
-					<img src={company.icon} alt={company.name} />
+			{#each Object.entries(companies) as [company, { icon, link }]}
+				<a href={link} target="_blank">
+					<img src={icon} alt={company} />
 				</a>
 			{/each}
 		</div>
