@@ -1,16 +1,10 @@
 <script>
-	import { base } from '$app/paths'
 	import '../app.css'
 	import '../diete.css'
 
 	const { children } = $props()
 </script>
 
-<svelte:head>
-	<link rel="icon" href={`${base}/favicon.ico`} sizes="32x32" />
-	<link rel="icon" href={`${base}/icon.svg`} type="image/svg+xml" />
-	<link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} />
-</svelte:head>
 <main>
 	{#if children}
 		{@render children()}
