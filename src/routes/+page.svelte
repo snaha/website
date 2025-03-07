@@ -318,8 +318,7 @@
 		width: 100%;
 		gap: var(--half-padding);
 	}
-	footer > a,
-	footer > span {
+	footer > a {
 		color: var(--colors-high);
 		font-family: 'Space Grotesk';
 		font-size: 16px;
