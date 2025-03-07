@@ -200,16 +200,16 @@
 		>
 		<Typography variant={isMobile ? 'default' : 'h3'} class="normal block"
 			>Drop us an email at <a href="mailto:hello@snaha.net">hello@snaha.net</a> or join our
-			<a href="/">Discord server</a>.</Typography
+			<a href="https://discord.gg/rrJ3c5DmBr">Discord server</a>.</Typography
 		>
 	</div>
 </section>
 <Divider --double-padding="0" />
 <footer>
-	<span>hello@snaha.net</span>
+	<a href="mailto:hello@snaha.net">hello@snaha.net</a>
 	<a href={`${base}/contact`}>Contact us</a>
 	<a href="https://github.com/snaha" target="_blank">Github</a>
-	<a href="/">Discord</a>
+	<a href="https://discord.gg/rrJ3c5DmBr">Discord</a>
 	{#if !isMobile}
 		<div class="grower"></div>
 	{/if}
