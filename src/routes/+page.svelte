@@ -115,7 +115,7 @@
 	{#each coreTeam as member}
 		<div class="card">
 			<img src={member.img} alt={member.name} />
-			<Heading text={member.name} />
+			<Heading text={member.name} height={64} />
 			<Typography>{member.info}</Typography>
 		</div>
 	{/each}
@@ -231,7 +231,8 @@
 	}
 	section {
 		display: flex;
-		align-items: center;
+		flex-direction: row;
+		align-items: flex-start;
 		align-self: stretch;
 		gap: calc(2 * var(--double-padding));
 	}
@@ -301,6 +302,7 @@
 	.card {
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-start;
 		gap: var(--double-padding);
 		max-width: 352px;
 		min-width: 221.33px;
