@@ -1,29 +1,15 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
-
 	interface Props {
 		text: string
 		color?: 'accent' | 'top'
 		large?: boolean
+		height?: number
 	}
-	let { text, color = 'top', large = false }: Props = $props()
-
-	let root: HTMLDivElement
-	let wrapper: HTMLDivElement
-
-	function setRootHeight() {
-		const rect = wrapper.getBoundingClientRect()
-		root.style.height = `${rect.height}px`
-	}
-	onMount(() => {
-		window.addEventListener('resize', setRootHeight)
-		setRootHeight()
-		return () => window.removeEventListener('resize', setRootHeight)
-	})
+	let { text, color = 'top', large = false, height }: Props = $props()
 </script>
 
-<div class="root" bind:this={root}>
-	<div class="wrapper {color}" class:large bind:this={wrapper}>
+<div class="root" style={height ? `height: ${height}px` : undefined}>
+	<div class="wrapper {color}" class:large>
 		{#each text.split(' ') as word}
 			<span>{word}</span>
 		{/each}
@@ -33,12 +19,13 @@
 <style>
 	.root {
 		display: flex;
-		align-items: center;
-		width: fit-content;
+		flex-direction: column;
+		justify-content: flex-end;
 	}
 	.wrapper {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		font-family: var(--font-family-snaha);
 		font-style: normal;
 		font-weight: 400;
