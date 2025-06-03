@@ -8,7 +8,8 @@
 		imageType?: string
 	}
 
-	const linkPreviewImageURL = `${page.url.origin}/link-preview.png`
+	const origin = page.url.origin
+	const linkPreviewImageURL = `${origin}/link-preview.png`
 
 	let {
 		title = 'Snaha Collective',
@@ -26,6 +27,8 @@
 <meta property="og:image:type" content={imageType} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:url" content={origin} />
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
