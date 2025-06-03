@@ -2,12 +2,11 @@
 	import { page } from '$app/state'
 
 	const origin = page.url.origin
-	const linkPreviewImageURL = `${origin}/link-preview.png`
 
 	const title = 'Snaha Collective'
 	const description =
 		'The collective that turns worthy ideas into products. The idea is to make the web a tiny better for hoomans.'
-	const image = linkPreviewImageURL
+	const image = $derived(`${origin}/link-preview.png`)
 	const imageType = 'image/png'
 </script>
 
