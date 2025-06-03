@@ -1,10 +1,9 @@
 <script lang="ts">
 	const origin = 'https://snaha.net'
-
 	const title = 'Snaha Collective'
 	const description =
 		'The collective that turns worthy ideas into products. The idea is to make the web a tiny better for hoomans.'
-	const image = $derived(`${origin}/link-preview.png`)
+	const image = `${origin}/link-preview.png`
 	const imageType = 'image/png'
 </script>
 
