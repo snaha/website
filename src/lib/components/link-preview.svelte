@@ -1,22 +1,14 @@
 <script lang="ts">
 	import { page } from '$app/state'
 
-	type Props = {
-		title?: string
-		description?: string
-		image?: string
-		imageType?: string
-	}
-
 	const origin = page.url.origin
 	const linkPreviewImageURL = `${origin}/link-preview.png`
 
-	let {
-		title = 'Snaha Collective',
-		description = 'The collective that turns worthy ideas into products. The idea is to make the web a tiny better for hoomans.',
-		image = linkPreviewImageURL,
-		imageType = 'image/png'
-	}: Props = $props()
+	const title = 'Snaha Collective'
+	const description =
+		'The collective that turns worthy ideas into products. The idea is to make the web a tiny better for hoomans.'
+	const image = linkPreviewImageURL
+	const imageType = 'image/png'
 </script>
 
 <title>{title}</title>
