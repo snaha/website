@@ -158,11 +158,10 @@
 	<div class="card">
 		<Heading text="AI" />
 		<Typography>
-			We create fast, maintainable, and accessible user interfaces with Svelte, focusing on high
-			performance and seamless experiences across devices. Our backend systems provide a solid
-			foundation, featuring APIs for business logic, efficient database management, and secure
-			authentication. We prioritize scalability and maintainability while keeping our solutions
-			simple.
+			We have experience in creating products that utilize AI models to solve complex problems with
+			a special focus on usability. Our expertise spans text, image and video generation allowing us
+			to create versatile solutions for various needs. We also trained custom models to enhance
+			performance, optimizing both generation speed and the effectiveness of AI processes.
 		</Typography>
 	</div>
 </section>
@@ -170,7 +169,10 @@
 	<div class="card">
 		<Heading text="Branding" />
 		<Typography>
-			Meaningful branding will help make your product stand out and help build brand loyalty. There should be a strong connection between the product and the brand. Based on product design, we can help with defining a brand concept and strategy, designing your product logo and actionable branding guidelines to build websites, marketing material and more.
+			Meaningful branding will help make your product stand out and help build brand loyalty. There
+			should be a strong connection between the product and the brand. Based on product design, we
+			can help with defining a brand concept and strategy, designing your product logo and
+			actionable branding guidelines to build websites, marketing material and more.
 		</Typography>
 	</div>
 	<div class="card">
