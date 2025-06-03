@@ -170,11 +170,7 @@
 	<div class="card">
 		<Heading text="Branding" />
 		<Typography>
-			We create fast, maintainable, and accessible user interfaces with Svelte, focusing on high
-			performance and seamless experiences across devices. Our backend systems provide a solid
-			foundation, featuring APIs for business logic, efficient database management, and secure
-			authentication. We prioritize scalability and maintainability while keeping our solutions
-			simple.
+			Meaningful branding will help make your product stand out and help build brand loyalty. There should be a strong connection between the product and the brand. Based on product design, we can help with defining a brand concept and strategy, designing your product logo and actionable branding guidelines to build websites, marketing material and more.
 		</Typography>
 	</div>
 	<div class="card">
