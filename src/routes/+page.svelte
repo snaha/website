@@ -57,9 +57,9 @@
 		{#if isMobile}
 			<img src={`${base}/header-img.png`} alt="Header" />
 		{/if}
-		<Typography variant={isMobile ? 'default' : 'h3'} class="normal block"
-			><span class="yellow">We turn worthy ideas into products.</span>
-			Snaha is a product makers collective geared towards making the web a bit better for hoomans.</Typography
+		<Typography variant={isMobile ? 'default' : 'h3'} class="normal block">
+			The collective that turns worthy ideas into products. The idea is to make the web a tiny
+			better for hoomans.</Typography
 		>
 		<Button
 			--colors-ultra-high="var(--colors-high-accent)"
@@ -78,9 +78,9 @@
 	</div>
 	<div class="container">
 		<Typography variant={isMobile ? 'default' : 'large'}
-			>We’re a small and independent OG team defending privacy, freedom and more generally, human
-			interests in software products.<br /><br />We build for the web — websites, web applications,
-			web3 dapps & other crypto-related projects.
+			>We’re a small, independent team defending privacy, freedom, and human interests using
+			software products.
+			<br /><br />We build for the web — sites, apps, web3 dapps, and other crypto-related projects.
 		</Typography>
 	</div>
 </section>
@@ -142,28 +142,30 @@
 <section>
 	<div class="card">
 		<Heading text="Design" />
-		<Typography>
+		<Typography style="display: block">
 			We can help from defining the product scope and features all the way to the finest execution
-			details. We typically use Diète, our own open-source design system, which can be customised
-			into a unique visual direction. This allows us to move faster while ensuring quality and the
-			highest accessibility standards.
+			details. We typically use <a href="https://diete.design">Diète</a>, our own open-source design
+			system, which can be customised into a unique visual direction. This allows us to move faster
+			while ensuring quality and the highest accessibility standards.
 		</Typography>
 	</div>
 	<div class="card">
-		<Heading text="Frontend" />
+		<Heading text="Full-stack" />
 		<Typography>
-			We build fast, maintainable, and accessible user interfaces using Svelte. Its modern, reactive
-			approach allows us to write less code while achieving high performance. We focus on delivering
-			smooth interactions, quick load times, and a seamless experience across all devices.
+			We create fast, maintainable, and accessible user interfaces with Svelte, focusing on high
+			performance and seamless experiences across devices. Our backend systems provide a solid
+			foundation, featuring APIs for business logic, efficient database management, and secure
+			authentication. We prioritize scalability and maintainability while keeping our solutions
+			simple.
 		</Typography>
 	</div>
 	<div class="card">
-		<Heading text="Backend" />
+		<Heading text="AI" />
 		<Typography>
-			We develop backend systems that serve as a strong foundation for applications. This includes
-			APIs for handling business logic, database management for storing and retrieving data
-			efficiently, and authentication to ensure security. We prioritize scalability and
-			maintainability while keeping things as simple as possible.
+			We have experience in creating products that utilize AI models to solve complex problems with
+			a special focus on usability. Our expertise spans text, image and video generation allowing us
+			to create versatile solutions for various needs. We also trained custom models to enhance
+			performance, optimizing both generation speed and the effectiveness of AI processes.
 		</Typography>
 	</div>
 </section>
@@ -171,10 +173,10 @@
 	<div class="card">
 		<Heading text="Branding" />
 		<Typography>
-			Meaningful branding will help make your product stand out. We believe that there should be a
-			strong connection between the product and the brand. Based on product design, we can help with
-			defining a minimal brand concept and strategy, designing your product logo and actionable
-			branding guidelines to build websites, marketing material and more.
+			Meaningful branding will help make your product stand out and help build brand loyalty. There
+			should be a strong connection between the product and the brand. Based on product design, we
+			can help with defining a brand concept and strategy, designing your product logo and
+			actionable branding guidelines to build websites, marketing material and more.
 		</Typography>
 	</div>
 	<div class="card">
