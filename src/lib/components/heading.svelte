@@ -1,29 +1,15 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
-
 	interface Props {
 		text: string
 		color?: 'accent' | 'top'
 		large?: boolean
+		top?: string
 	}
-	let { text, color = 'top', large = false }: Props = $props()
-
-	let root: HTMLDivElement
-	let wrapper: HTMLDivElement
-
-	function setRootHeight() {
-		const rect = wrapper.getBoundingClientRect()
-		root.style.height = `${rect.height}px`
-	}
-	onMount(() => {
-		window.addEventListener('resize', setRootHeight)
-		setRootHeight()
-		return () => window.removeEventListener('resize', setRootHeight)
-	})
+	let { text, color = 'top', large = false, top = '32px' }: Props = $props()
 </script>
 
-<div class="root" bind:this={root}>
-	<div class="wrapper {color}" class:large bind:this={wrapper}>
+<div class="root" style={`padding-top: ${top}`}>
+	<div class="wrapper {color}" class:large>
 		{#each text.split(' ') as word}
 			<span>{word}</span>
 		{/each}
@@ -33,12 +19,13 @@
 <style>
 	.root {
 		display: flex;
-		align-items: center;
-		width: fit-content;
+		flex-direction: column;
+		justify-content: flex-end;
 	}
 	.wrapper {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		font-family: var(--font-family-snaha);
 		font-style: normal;
 		font-weight: 400;
@@ -46,6 +33,7 @@
 		line-height: 48px;
 		text-transform: uppercase;
 		transform: rotate(-11deg) skewX(-11deg);
+		transform-origin: bottom left;
 		width: fit-content;
 	}
 

@@ -58,6 +58,7 @@
 	--three-quarters-padding: calc(var(--quarter-padding) * 3);
 	--one-and-a-half-padding: calc(var(--half-padding) * 3);
 	--double-padding: calc(2 * var(--padding));
+	--quadruple-padding: calc(4 * var(--padding));
 	--border-radius: 0;
 	--focus-outline: 4px solid var(--colors-top);
 	--focus-outline-offset: -4px;
