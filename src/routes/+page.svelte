@@ -37,6 +37,7 @@
 	let height = $state(0)
 	let scrollY = $state(0)
 	let navShown = $derived(height + (isMobile ? 16 : 64) <= scrollY)
+	const top = $derived(isMobile ? 'var(--double-padding)' : 'var(--quadruple-padding)')
 </script>
 
 <svelte:window bind:innerWidth={width} bind:scrollY />
@@ -71,7 +72,7 @@
 <Divider --double-padding="0" />
 <section>
 	<div class="container">
-		<Heading text="human- friendly web" color="accent" large={!isMobile} />
+		<Heading text="human- friendly web" color="accent" large={!isMobile} {top} />
 	</div>
 	<div class="container">
 		<Typography variant={isMobile ? 'default' : 'large'}
@@ -108,14 +109,14 @@
 		</div>
 	</div>
 	<div class="container">
-		<Heading text="our core team" color="accent" large={!isMobile} />
+		<Heading text="our core team" color="accent" large={!isMobile} {top} />
 	</div>
 </section>
 <section>
 	{#each coreTeam as member}
 		<div class="card">
 			<img src={member.img} alt={member.name} />
-			<Heading text={member.name} height={64} />
+			<Heading text={member.name} {top} />
 			<Typography>{member.info}</Typography>
 		</div>
 	{/each}
@@ -123,7 +124,7 @@
 <Divider --double-padding="0" />
 <section>
 	<div class="container">
-		<Heading text="connect the dots" color="accent" large={!isMobile} />
+		<Heading text="connect the dots" {top} color="accent" large={!isMobile} />
 	</div>
 	<div class="container">
 		<Typography variant={isMobile ? 'default' : 'large'}>
@@ -305,7 +306,7 @@
 		justify-content: flex-start;
 		gap: var(--double-padding);
 		max-width: 352px;
-		min-width: 221.33px;
+		min-width: 221px;
 		width: 100%;
 	}
 	.card > img {

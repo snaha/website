@@ -3,12 +3,12 @@
 		text: string
 		color?: 'accent' | 'top'
 		large?: boolean
-		height?: number
+		top?: string
 	}
-	let { text, color = 'top', large = false, height }: Props = $props()
+	let { text, color = 'top', large = false, top = '32px' }: Props = $props()
 </script>
 
-<div class="root" style={height ? `height: ${height}px` : undefined}>
+<div class="root" style={`padding-top: ${top}`}>
 	<div class="wrapper {color}" class:large>
 		{#each text.split(' ') as word}
 			<span>{word}</span>
@@ -33,6 +33,7 @@
 		line-height: 48px;
 		text-transform: uppercase;
 		transform: rotate(-11deg) skewX(-11deg);
+		transform-origin: bottom left;
 		width: fit-content;
 	}
 
