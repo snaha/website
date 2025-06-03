@@ -11,6 +11,8 @@
 	const companies = {
 		Prezi: { icon: `${base}/icons/prezi.svg`, link: 'https://prezi.com' },
 		Felfele: { icon: `${base}/icons/felfele.svg`, link: 'https://felfele.org' },
+		CERN: { icon: `${base}/icons/cern.svg`, link: 'https://home.cern' },
+		Giveth: { icon: `${base}/icons/giveth.svg`, link: 'https://giveth.io' },
 		Swarm: { icon: `${base}/icons/swarm.svg`, link: 'https://www.ethswarm.org' },
 		Logos: { icon: `${base}/icons/logos.svg`, link: 'https://logos.co' },
 		Kalkul: { icon: `${base}/icons/kalkul.svg`, link: 'https://kalkul.app/' },
@@ -90,7 +92,9 @@
 				target="_blank">Prezi</a
 			>. In 2019, they co-founded the
 			<a href={companies.Felfele.link} target="_blank">Felfele Foundation</a>. Shortly after that,
-			they met with Vojtech while working with the
+			they met with Vojtech, <a href={companies.CERN.link} target="_blank">CERN</a> alumni and
+			co-founder of
+			<a href={companies.Giveth.link} target="_blank">Giveth</a>, while working with the
 			<a href={companies.Swarm.link} target="_blank">Swarm Foundation</a>. Since then Attila, David
 			and Vojtech have stuck together. They’ve worked with different teams at
 			<a href={companies.Logos.link} target="_blank">Logos</a>
