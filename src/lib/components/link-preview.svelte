@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/state'
-
-	const origin = page.url.origin
+	const origin = 'https://snaha.net'
 
 	const title = 'Snaha Collective'
 	const description =
