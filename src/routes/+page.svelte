@@ -52,7 +52,7 @@
 	<div class="left">
 		<img src={`${base}/logo.svg`} alt="Logo" class="logo" />
 		{#if isMobile}
-			<img src={`${base}/header-img.svg`} alt="Header" />
+			<img src={`${base}/header-img.png`} alt="Header" />
 		{/if}
 		<Typography variant={isMobile ? 'default' : 'h3'} class="normal block"
 			><span class="yellow">We turn worthy ideas into products.</span>
@@ -65,7 +65,7 @@
 		>
 	</div>
 	{#if !isMobile}
-		<img src={`${base}/header-img.svg`} alt="Header" class="header-img" />
+		<img src={`${base}/header-img.png`} alt="Header" class="header-img" />
 	{/if}
 </section>
 <Divider --double-padding="0" />
