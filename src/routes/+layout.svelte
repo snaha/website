@@ -1,9 +1,14 @@
 <script>
+	import LinkPreview from '$lib/components/link-preview.svelte'
 	import '../app.css'
 	import '../diete.css'
 
 	const { children } = $props()
 </script>
+
+<svelte:head>
+	<LinkPreview />
+</svelte:head>
 
 <main>
 	{#if children}
