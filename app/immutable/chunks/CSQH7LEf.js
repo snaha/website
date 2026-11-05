@@ -1,0 +1,1 @@
+const t="https://snaha.net",a="Snaha Collective",e="Snaha is a software makers collective that turns worthy ideas into products. The idea is to make the web a tiny better for hoomans.";export{e as D,t as O,a as T};
