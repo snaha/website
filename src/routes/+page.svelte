@@ -4,6 +4,7 @@
 	import Typography from '$lib/components/diete/typography.svelte'
 	import Heading from '$lib/components/heading.svelte'
 	import { base } from '$app/paths'
+	import { DESCRIPTION } from '$lib/constants'
 
 	let width = $state(0)
 	const isMobile = $derived(width < 920)
@@ -58,8 +59,7 @@
 			<img src={`${base}/header-img.png`} alt="Header" />
 		{/if}
 		<Typography variant={isMobile ? 'default' : 'h3'} class="normal block">
-			The collective that turns worthy ideas into products. The idea is to make the web a tiny
-			better for hoomans.</Typography
+			{DESCRIPTION}</Typography
 		>
 		<Button
 			--colors-ultra-high="var(--colors-high-accent)"
@@ -78,7 +78,7 @@
 	</div>
 	<div class="container">
 		<Typography variant={isMobile ? 'default' : 'large'}
-			>We’re a small, independent team defending privacy, freedom, and human interests using
+			>Snaha is a small, independent team defending privacy, freedom, and human interests using
 			software products.
 			<br /><br />We build for the web — sites, apps, web3 dapps, and other crypto-related projects.
 		</Typography>
